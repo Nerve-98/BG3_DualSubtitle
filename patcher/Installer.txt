@@ -1,0 +1,17 @@
+@echo off
+set pakPath="%~dp0%Korean.pak"
+set destPath="C:\Program Files (x86)\Steam\steamapps\common\Baldurs Gate 3\Data\Localization\Korean"
+if not exist %pakPath% (
+	echo Please check file %pakPath% exist.
+	pause 
+	exit
+) 
+if not exist %destPath% (
+	echo Please check folder %destPath% exist.
+	pause 
+	exit
+) 
+@echo on
+copy %pakPath% %destPath%
+echo Path has done successfully.
+pause
